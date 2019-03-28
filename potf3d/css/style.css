@@ -48,6 +48,9 @@ body{
 .line.conC{
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url("../img/line3.png");
 }
+.line.conD{
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.5)),url("../img/line4.png");
+}
 .container{
 	max-width: 100%;
 	width: 960px;
@@ -88,6 +91,9 @@ p{
 }
 .illust img{
 	flex: 0 0 292px;
+}
+.last{
+	background-image: linear-gradient(rgba(255, 0, 0, 0.1),rgba(255, 0, 0, 0.1));
 }
 .right{
 	text-align: right;
