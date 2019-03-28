@@ -51,9 +51,8 @@ body{
 .container{
 	max-width: 100%;
 	width: 960px;
-	margin: 0 auto;
+	margin: 0 auto 150px;
 	padding: 15px;
-/*	background-color: #888;*/
 }
 p{
 	padding: 0 10px;
@@ -82,7 +81,7 @@ p{
 	flex: 3;
 }
 .illust{
-	margin: 0 auto;
+	margin: 0 auto 300px;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
