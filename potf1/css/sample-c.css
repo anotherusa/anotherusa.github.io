@@ -86,7 +86,7 @@ p{
 .margin{
 	height: 80px;
 }
-.con2 .container,.con4 .container{
+.ff_rr{
 	flex-flow: row-reverse;
 }
 .img{
