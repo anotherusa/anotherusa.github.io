@@ -1,0 +1,104 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 全体の設定 */
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
+	font-size: 14px;
+	background-color: #912;
+	color: #fff;
+	background-attachment: fixed;
+	background-image: url(../img/smp-c-hero.jpg);
+	background-size: cover;
+	background-position: center;
+}
+.container{
+	width: 960px;
+	max-width: 100%;
+	margin: 0 auto;
+	align-items: center;
+}
+.bgc_red{
+	background-color: rgba(153, 17, 34, 0.95);
+}
+.bgc_dk{
+	background-color: rgba(34, 17, 17, 0.95);
+}
+header .container{
+	justify-content: space-between;
+	line-height: 70px;
+}
+.logo{
+	display: inline-block;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-family: serif;
+	font-size: 24px;
+	text-decoration: none;
+}
+nav ul{
+	display: flex;
+	list-style: none;
+}
+nav a{
+	text-decoration: none;
+	color: #fff;
+	padding: 22px 15px 24px;
+}
+nav a:hover{
+	color: #999;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2));
+}
+.d_flex{
+	display: flex;
+}
+.hero_img{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
+	min-height: 500px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.hero_img h2,.hero_img p{
+	margin: 0;
+}
+h1{
+	font-family: serif;
+	font-size: 48px;
+}
+h2{
+	margin: 30px 20px;
+	font-size: 30px;
+}
+h3{
+	margin: 15px;
+}
+p{
+	margin: 10px 20px;
+	font-size: 14px;
+}
+.margin{
+	height: 80px;
+}
+.con2 .container,.con4 .container{
+	flex-flow: row-reverse;
+}
+.img{
+	flex: 2;
+	background-size: cover;
+	background-position: center;
+	min-height: 300px;
+}
+.text{
+	flex: 3;
+
+}
+footer .container{
+	text-align: center;
+}
