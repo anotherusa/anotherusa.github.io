@@ -108,6 +108,12 @@ p{
 	flex: 3;
 
 }
+address{
+	font-style: normal;
+}
+iframe{
+	margin-bottom: 35px;
+}
 footer .container{
 	text-align: center;
 }
