@@ -68,6 +68,15 @@ nav a:hover{
 .hero_img h2,.hero_img p{
 	margin: 0;
 }
+.min_hero{
+	background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4));
+	min-height: 200px;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+		background-size: cover;
+	background-position: center;
+}
 h1{
 	font-family: serif;
 	font-size: 48px;
@@ -101,4 +110,18 @@ p{
 }
 footer .container{
 	text-align: center;
+}
+
+@keyframes fadeIn{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.container{
+	animation-name: fadeIn;
+	animation-diration: 1s;
+	animation-delay: 0;
 }
