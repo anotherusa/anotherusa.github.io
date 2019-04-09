@@ -20,7 +20,7 @@ body {
 }
 .container{
 	width: 960px;
-	max-width: 100%;
+	max-width: 94%;
 	margin: 0 auto;
 	align-items: center;
 }
@@ -42,13 +42,20 @@ header .container{
 	font-size: 24px;
 	text-decoration: none;
 }
-nav ul{
+.nwrap{
+	white-space: nowrap;
+}
+header nav ul{
 	display: flex;
+}
+nav ul{
 	list-style: none;
 }
 nav a{
 	text-decoration: none;
 	color: #fff;
+}
+header nav a{
 	padding: 22px 15px 24px;
 }
 nav a:hover{
@@ -86,6 +93,7 @@ h2{
 	font-size: 30px;
 }
 h3{
+	font-size: 18px;
 	margin: 15px;
 }
 p{
@@ -99,14 +107,13 @@ p{
 	flex-flow: row-reverse;
 }
 .img{
-	flex: 2;
+	flex: 4;
 	background-size: cover;
 	background-position: center;
 	min-height: 300px;
 }
 .text{
-	flex: 3;
-
+	flex: 5;
 }
 address{
 	font-style: normal;
@@ -115,19 +122,41 @@ iframe{
 	margin-bottom: 35px;
 }
 footer .container{
+	padding-top: 30px;
+	padding-bottom: 30px;
 	text-align: center;
 }
+footer .text{
+	text-align: left;
+	max-width: 250px;
+}
+footer .d_flex{
+	margin: 20px 0 40px;
+	justify-content: space-around;
+}
 
-@keyframes fadeIn{
-	0%{
-		opacity: 0;
+@media (max-width: 599px) {
+	.ff_rr{
+		flex-flow: row;
 	}
-	100%{
-		opacity: 1;
+	.d_flex{
+		flex-wrap: wrap;
+	}
+	.img{
+		flex: 0 0 100%;
+		margin-top: 20px;
+		min-height: 200px;
+	}
+	.text{
+		flex: 0 0 100%;
 	}
 }
-.container{
-	animation-name: fadeIn;
-	animation-diration: 1s;
-	animation-delay: 0;
+@media (max-width: 399px) {
+	h1{
+		font-size: 36px;
+	}
+	h2{
+		font-size: 28px;
+	}
 }
+	
