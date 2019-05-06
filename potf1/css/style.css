@@ -30,6 +30,7 @@ address{
 a{
 	text-decoration:none;
 	color: inherit;
+	z-index: 2000;
 }
 time{
 	font-size: 80%;
@@ -46,9 +47,8 @@ body{
 	background-color: #fff;
 	background-image: url("../img/p_bgimg.jpg");
 	background-position: center;
-	background-size: cover;
+	background-attachment: fixed;
 	overflow-x: hidden;
-
 }
 h1{
 	font-size: 24px;
@@ -148,6 +148,7 @@ a:hover{
 .tab_area{
 	width: 20px;
 	position: relative;
+	height: 0;
 }
 .tab_text{
 	display: flex;
@@ -287,9 +288,20 @@ article > div:nth-child(2){
 	outline: 15px #fff solid;
 }
 /* ↑ ヒーローイメージ ↑ */
-/* ↓ sheet4 ↓ */
+/* ↓ con1 ↓ */
 
-/* ↑ sheet4 ↑ */
+/* ↑ con1 ↑ */
+/* ↓ con2 ↓ */
+#con2 ul{
+	list-style: disc;
+}
+/* ↑ con2 ↑ */
+/* ↓ con3 ↓ */
+
+/* ↑ con3 ↑ */
+/* ↓ con4 ↓ */
+
+/* ↑ con4 ↑ */
 /* ↓ sheet4 ↓ */
 
 /* ↑ sheet4 ↑ */
