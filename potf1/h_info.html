@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>ひいらぎ不動産 : お知らせ</title>
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/h_style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//トグルボタン
+				//ヘッダーのトグルボタンのクラス着脱
+				var btn = '.header_btn';
+				var open = '.header_open';
+				var close = '.header_close';
+				$(btn).click(function(){
+					$(close).removeClass('header_close');
+					$(open).toggleClass('header_close');
+					$(btn).toggleClass('header_open');
+					$('.header_menu').toggleClass('header_open');
+					$('.header_click').toggleClass('header_open');
+				});
+				//トグルメニューを開いていた場合、スクロールでメニューが消える
+				$(window).on('scroll',function(){
+					if ($(btn).hasClass('header_open')){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+					}
+				});
+				//トグルメニューを開いているときに、他の部分をタップすると消える
+				$('.header_click').click(function(){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+				});
+						
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header class="bg_bl ahv_dk">
+			<div class="container">
+				<div class="header_logo">
+					<h1><a href="h_index.html">Hiiragi Real Estate</a></h1>
+				</div>
+				<div class="header_btn">
+					<div></div><div></div><div></div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container">
+					<nav class="header_menu header_close">
+						<ul>
+							<li class="icon"><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+							<li><a href="h_info.html">お知らせ</a></li>
+							<li><a href="h_point.html">物件選びのポイント</a></li>
+							<li><a href="h_rcm.html">おすすめ物件</a></li>
+							<li><a href="h_company.html">会社案内</a></li>
+							<li><a href="h_contact.html">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="header_click header_close"></div>
+		<article>
+			<div class="bg_lb ahv_dk">
+				<div class="container bread">
+					<ul>
+						<li><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+						<li><i class="fas fa-angle-right"></i></li>
+						<li><a href="#">お知らせ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container d_flex jc_b ai_fs">
+				<div class="page_l">
+					<section class="inner">
+						<div class="hl hl_tl">
+							<h1>お知らせ</h1>
+						</div>
+						<p>開催中のキャンペーンや新規募集の物件情報など、最新情報をおしらせいたします。</p>
+					</section>
+					<div id="con1" class="inner">
+						<section class="ahv_dk">
+							<div class="hl hl_ll">
+								<h2>今月のおすすめ物件を更新しました。</h2>
+							</div>
+							<time datatime="2019-05-07">2019.5.7</time>	
+							<p>
+								5月の<a href="h_rcm.html">おすすめ物件</a>を更新しました。<br>
+								今月も良い物件がございます。ぜひ、ご覧ください。
+							</p>
+						</section>
+						<section>
+							<div class="go_top ahv_dk">
+								<a href="#">ページ先頭へ</a>
+							</div>
+						</section>
+					</div>
+					<div id="con2" class="inner">
+						<section>
+							<div class="hl hl_ll">
+								<h2>ゴールデンウィーク中の営業について</h2>
+							</div>
+							<time datatime="2019-04-22">2019.4.22</time>	
+							<p>
+								ゴールデンウィーク中の営業についてのお知らせです。<br>
+								4月29日（月）の定休日より、5月6日（月）までの8日間、誠に勝手ながらお休みさせていただきます。<br>
+								5月7日（火）より通常営業させていただきます。<br>
+							</p>
+						</section>
+						<section>
+							<div class="go_top ahv_dk">
+								<a href="#">ページ先頭へ</a>
+							</div>
+						</section>
+					</div>
+					<div id="con3" class="inner">
+						<section>
+							<div class="hl hl_ll">
+								<h2>新築マンション「アイビーハイム青島」の募集を開始しました。</h2>
+							</div>
+							<time datatime="2019-04-08">2019.4.8</time>	
+							<p>
+								新築分譲マンション「アイビーハイム青島」の募集を開始しました。<br>
+								リビングが見えるカウンター式のシステムキッチン。<br>
+								段差のないバリアフリー設計、ファミリーにもおすすめの物件です。<br>
+								モデルルームの内見にぜひお越しください。<br>
+							</p>
+						</section>
+						<section>
+							<div class="go_top ahv_dk">
+								<a href="#">ページ先頭へ</a>
+							</div>
+						</section>
+					</div>
+					<div id="con4" class="inner">
+						<section>
+							<div class="hl hl_ll">
+								<h2>今月のおすすめ物件を更新しました。</h2>
+							</div>
+							<time datatime="2019-04-01">2019.4.1</time>	
+							<p>
+								4月の<a href="h_rcm.html">おすすめ物件</a>を更新しました。<br>
+								今月も良い物件がございます。ぜひ、ご覧ください。
+							</p>
+						</section>
+						<section>
+							<div class="go_top ahv_dk">
+								<a href="#">ページ先頭へ</a>
+							</div>
+						</section>
+					</div>
+					<div id="con5" class="inner">
+						<section>
+							<div class="hl hl_ll">
+								<h2>Webサイトをリニューアルしました。</h2>
+							</div>
+							<time datatime="2019-04-01">2019.4.1</time>	
+							<p>
+								Webサイトをリニューアルしました。<br>
+								気持ちも新たに頑張って営業いたします。<br>
+								変わらぬご愛顧のほどをよろしくお願いいたします
+							</p>
+						</section>
+						<section>
+							<div class="go_top ahv_dk">
+								<a href="#">ページ先頭へ</a>
+							</div>
+						</section>
+					</div>
+				</div>
+				<aside class="page_r">
+					<div class="hl hl_ll">
+						<h2>おすすめ物件</h2>
+					</div>
+					<div class="box_list">
+						<ul class="ahv_dk">
+							<li>
+								<a href="#con1">
+									<time datatime="2019-05-07">2019.5.7</time>
+									今月のおすすめ物件を更新しました。
+								</a>
+							</li>
+							<li>
+								<a href="#con2">
+									<time datatime="2019-04-22">2019.4.22</time>
+									ゴールデンウィーク中の営業について。
+								</a>
+							</li>
+							<li>
+								<a href="#con3">
+									<time datatime="2019-04-08">2019.4.8</time>
+									新築マンション「アイビーハイム青島」の募集を開始しました。
+								</a>
+							</li>
+							<li>
+								<a href="#con4">
+									<time datatime="2019-04-01">2019.4.1</time>
+									今月のおすすめ物件を更新しました。
+								</a>
+							</li>
+							<li>
+								<a href="#con5">
+									<time datatime="2019-04-01">2019.4.1</time>
+									Webサイトをリニューアルしました。
+								</a>
+							</li>
+						</ul>
+					</div>
+				</aside>
+			</div>
+		</article>
+		<footer class="bg_bl ahv_dk">
+			<div class="hl">
+				<div class="container d_flex ai_st">
+					<h3><small>「安心」と「未来」をつくる　</small>ひいらぎ不動産</h3>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-twitter"></i></a></div>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer_menu d_flex ai_st">
+					<div>
+						<address>
+							<p>
+								〒105-0000<br>
+								東京都〇〇区〇〇1-1-1
+							</p>
+							<p>
+								TEL:03-5401-XXXX<br>
+								FAX:03-5401-XXXX
+							</p>
+						</address>
+						<p>
+							営業時間<br>
+							10:00～21:00<br>
+							月曜定休
+						</p>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_index.html">ホーム</a></li>
+								<li><a href="h_info.html">お知らせ</a></li>
+								<li><a href="h_point.html">物件選びのポイント</a></li>
+								<li><a href="h_rcm.html">オススメ物件</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_company.html">会社案内</a></li>
+								<li><a href="h_contact.html">お問い合わせ</a></li>
+								<li><a href="h_privacy.html">個人情報保護方針</a></li>
+								<li><a href="h_sitemap.html">サイトマップ</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container d_flex ta_c ai_st">
+					<div class="d_flex">
+						<small>&copy;Copyright 2019 Hiiragi Real Estate. All Right Reserved.</small>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,236 +1,301 @@
 @charset "utf-8";
 /* CSS Document */
 
-/* 全体の設定 */
-*{
+/* ↓ リセットCSS ↓ */
+*,html, body, header, article, footer, aside, section, div, nav, ol, ul, li, h1, h2, h3, h4, h5, h6, p, a, span, small, i, address, img, table, caption, tr, th, td, dl, dt, dd, form, label, iframe{
 	margin: 0;
 	padding: 0;
+	border: 0;
+	vertical-align: baseline;
 }
-body {
-	margin: 0;
-	padding: 0;
-	font-family: 'メイリオ', 'Hiragino Kaku Gothic Pro', sans-serif;
-	font-size: 16px;
-	background-color: #fff;
+
+header, article, footer, aside, section, nav{
+	display: block;
 }
-article,section {
-	margin: 0;
-	padding: 0;
-}
-ul {
-	margin: 0;
-	padding: 0;
+ol, ul {
 	list-style: none;
 }
-.container{
-	width: 960px;
-	max-width: 100%;
-	margin: 0 auto;
+q {
+	quotes: none;
+}
+q:before, q:after { sheettent: ''; sheettent: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+address{
+	font-style:normal;
 }
 a{
-	text-decoration: none;
+	text-decoration:none;
+	color: inherit;
 }
-a:hover {
-	background-image: linear-gradient(rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.2))
+time{
+	font-size: 80%;
+	font-weight: bold;
 }
-.bgc-white8{
-	background-color: rgba(255, 255, 255, 0.8);
+/* ↑ リセットCSS ↑ */
+
+
+/* ↓ 全体設定 ↓ */
+body{
+	font-family: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', 'sans-serif';
+	font-size: 14px;
+	color: #777;
+	background-color: #fff;
+	background-image: url("../img/p_bgimg.jpg");
+	background-position: center;
+	background-size: cover;
+	overflow-x: hidden;
+
 }
-/*.d-flex{
+h1{
+	font-size: 24px;
+}
+h2{
+	font-size: 20px;
+}
+h3{
+	font-size: 16px;
+}
+img{
+	width: 100%;
+	height: auto;
+	vertical-align: bottom;
+}
+.d_flex{
 	display: flex;
-}*/
-/* ヘッダー */
-header {
-	position: fixed;
-	display: flex;
-	font-size: 12px;
+	justify-content: space-around;
+	align-items: center;
+}
+.d_bl{
+	display: block;
+}
+.w_full{
+	width: 100%;
+	min-height: 100vh;
+}
+.d_flex > *{
+	flex: 1;
+}
+.d_flex > .w_full{
+	flex: 0 0 100%;
+}
+.jc_b{
+	justify-content: space-between;
+}
+.ai_st{
+	align-items: stretch;
+}
+.ai_fs{
+	align-items: flex-start;
+}
+.fw_w{
+	flex-wrap: wrap;
+}
+.ta_c{
+	text-align: center;
+}
+.ws_n{
+	white-space: nowrap;
+}
+.container{
+	width: 1000px;
+	max-width: 90%;
 	margin: 0 auto;
+}
+.inner{
+	margin: 0 0 0 auto;
+	width: calc(100% - 40px);
+	min-height: 100vh;
+}
+.content{
+	
+}
+.main{
+	width: 900px;
+	max-width: 93.75%;
+	margin: 0 auto;
+}
+.bgsheet.inner{
+	position: absolute;
+	top: 0;
+	left: 40px;
+	margin-left: 0;
+}
+.inner h3{
+
+}
+.inner p{
+
+}
+a:hover{
+	background-image: linear-gradient(rgba(255, 255, 255, 0.2),rgba(255, 255, 255, 0.2));
+}
+/* ↓ タブ形 ↓ */
+.tab{
+	position: absolute;
+	left: 0;
+	height: calc(20vh - 40px);
+	width: 0;
+	border-width: 20px 40px 20px 0px;
+	border-style: solid;
+}
+/* ↑ タブ形 ↑ */
+
+/* ↓ タブ文字 ↓ */
+.tab_area{
+	width: 20px;
+	position: relative;
+}
+.tab_text{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+	width: 40px;
+}
+.tab_text:first-child{
+	margin-top: 10vh;
+}
+.tab_text a{
+	z-index: 1000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex: 0 0 20vh;
+	height: 40px;
+	transform: rotate(90deg);
+	text-align: center;
+}
+/* ↑ タブ文字 ↑ */
+/* ↑ 全体設定 ↑ */
+header{
+	position: fixed;
+	top: 0;
+	left: 0;
 	width: 100%;
 	z-index: 1000;
 }
-header ul {
-	display: flex;
-	flex: 1;
-}
-header a {
-	display: block;
-	padding: 10px 20px;
-	color: #bbb;
-}
-header .container {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-/* アーティクル */
-article{
-	position: relative;
-	padding-top: 40px;
-}
-
-article.hero{
-	padding-top: 0;
-}
-
-.heroimg {
-	margin: 0;
-	display: flex;
-	background-color: #fff;
-	max-width: 100%;
-	height: 100vh;
-	align-items: center;
-	justify-content: center;
-	background-position: center;
-	background-size: cover;
-}
-.heroimg h1{
-	color: #bbb;
-	font-size: 30px;
-}
-
-/* 記事内の情報 */
-.h1-design{
-	padding: 10px;
-	border-left: 7px solid #bbb;
-	color: #999;
-	font-size: 18px;
-}
-.h1-design p{
-	padding-left: 10px;
-	font-size: 14px;
-}
-.box{
-	max-width: 100%;
-	margin: 10px;
-	padding: 10px;
-	display: flex;
-	flex-wrap: wrap;
-	border: 1px solid #ddd;
-	flex: 1;
-}
-/*.center{
-	justify-content: center;
-}*/
-.box-small{
-	width: 100%;
-	margin: 0;
-	padding: 0;
-	display: flex;
-	flex-wrap: wrap;
-	border: 0;
-	justify-content: center;
-}
-.photo {
-	height: 150px;
-	background-position: center;
-	background-size: cover;
-	flex: 0 0 150px;
-}
-.text{
-	padding: 10px;
-	flex: 3;
-	color: #999;
-}
-.text h2{
-	font-size: 20px; 
-}
-.text p{
-	padding: 10px;
-	font-size: 12px; 
-}
-.banner100{
-	width: 100px;
-	height: 100px;
-	flex: 0 0 100px;
-	background-position: center;
-	background-size: cover;
-}
-.banner200{
-	width: 200px;
-	height: 200px;
-	flex: 0 0 200px;
-	background-position: center;
-	background-size: cover;
-}
-table{
-	border-collapse: collapse;
-	width: 100%;
-}
-tr{
-	border-bottom: 1px solid #bbb;
-	border-top: 1px solid #bbb;
-}
-th{
-	width: 20%;
-	word-break: keep-all;
-	border-right: 1px dotted #bbb;
-}
-th,td{
-	padding: 10px;
-	font-size: 14px;
-}
-td ul{
-	padding-left: 10px;
-	margin: 10px 0;
-}
-
-
-/* 	コマ風配置 */
-.comic{
-	flex-wrap: wrap;
-	display: flex;
-	flex: 0 0 100%;
-	max-width: 400px;
-	margin: 0 auto;
-	padding: 20px 23px;
-}
-.com1,.com2,.com3{
-	border: 3px solid #888;
-	min-height: 200px;
-	margin: 10px 5px;
-	background-position: center;
-	background-size: cover;
-}
-.com1{
-	background-color: #dd8;
-	flex: 1 1 100%;
-
-}
-.com2{
-	background-color: #d88;
-	flex: 1 1 40%;
-}
-.com3{
-	background-color: #8d8;
-	flex: 1 1 24%;
-}
-.comic p{
-	border: 2px solid #888;
-	border-radius: 50%;
-	background-color: #fff;
-	padding: 10px 20px;
-	text-align: center;
-	display: inline-block;
-	margin-top: -10px;
-	font-size: 11px;
-}
-
-/* フッター */
-footer{
-	width: 100%;
-	text-align: center;
-	color: #bbb;
-}
-footer.home{
-	position: absolute;
+.bgsheet{
+	position: fixed;
+	top: 0;
 	left: 0;
-	bottom: 0;
+	width: 100%;
+	z-index: 100;
 }
+article > div:nth-child(2){
+	position: relative;
+	z-index: 900;
+}
+.bgsheet > div{
+	background-color: #fff;
+	filter: drop-shadow(2px 5px 6px #999);
+	z-index: 1;
+}
+.bgsheet > div > div{
+	position: relative;
+}
+/* ↓ sheet設定 ↓ */
+.sheet{
+	position: fixed;
+	top: 0;
+	left: 0;
+	filter: drop-shadow(2px 5px 6px #999);
+	opacity: 1;
+	transition: 0.2s;
+}
+.sheet.hide{
+	transition: 1s;
+}
+/* ↓ sheet1 ↓ */
+.sheet1{
+	z-index: 800;
+}
+.sheet1.hide{
+	z-index: 400;
+}
+.sheet1 .tab{
+	border-color: transparent #ffcdd9 transparent transparent;
+	top: 10vh;
+}
+.sheet1 .inner{
+	background-color: #ffcdd9;
+}
+/* ↑ sheet1 ↑ */
+/* ↓ sheet2 ↓ */
+.sheet2{
+	z-index: 700;
+}
+.sheet1.hide{
+	z-index: 300;
+}
+.sheet2 .tab{
+	border-color: transparent #fff4ab transparent transparent;
+	top: 30vh;
+}
+.sheet2 .inner{
+	background-color: #fff4ab;
+}
+/* ↑ sheet2 ↑ */
+/* ↓ sheet3 ↓ */
+.sheet3{
+	z-index: 600;
+}
+.sheet1.hide{
+	z-index: 200;
+}
+.sheet3 .tab{
+	border-color: transparent #cbffab transparent transparent;
+	top: 50vh;
+}
+.sheet3 .inner{
+	background-color: #cbffab;
+}
+/* ↑ sheet3 ↑ */
+/* ↓ sheet4 ↓ */
+.sheet4{
+	z-index: 500;
+}
+.sheet4 .tab{
+	border-color: transparent #abecff transparent transparent;
+	top: 70vh;
+}
+.sheet4 .inner{
+	background-color: #abecff;
+}
+/* ↑ sheet4 ↑ */
+/* ↑ sheet設定 ↑ */
 
-/* 	横幅768spx以上 */
-@media(min-width :768px){
-	.re{
-		flex-direction: row-reverse;
-	}
+
+/* ↓ ヒーローイメージ ↓ */
+.hero{
+	background-color: #ffd1fd;
+	filter: drop-shadow(2px 5px 6px #999);
 }
+.hero > div{
+	flex: 0 0 200px;
+	height: 200px;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	text-align: center;
+	background-color: #fff;
+	border: 3px #777 solid;
+	outline: 15px #fff solid;
+}
+/* ↑ ヒーローイメージ ↑ */
+/* ↓ sheet4 ↓ */
+
+/* ↑ sheet4 ↑ */
+/* ↓ sheet4 ↓ */
+
+/* ↑ sheet4 ↑ */
+/* ↓ sheet4 ↓ */
+
+/* ↑ sheet4 ↑ */
+/* ↓ sheet4 ↓ */
+
+/* ↑ sheet4 ↑ */

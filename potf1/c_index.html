@@ -1,0 +1,335 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="珈琲,自家焙煎,大阪,スペシャルティコーヒー,スーパープレミアムコーヒー">
+		<meta name="Description" content="オーダー自家焙煎のコーヒー豆専門店Red Beans Caffeです。ご注文を受けてから、生豆を目の前で焙煎し、販売しています。こだわりを持った最高品質の豆だけを取り揃え、ご来店をお待ちしております。焼き立て、挽きたて、淹れたての最高のコーヒーを是非ご賞味ください。">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>Red Beans Coffee : トップページ</title>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP|Noto+Serif+JP" rel="stylesheet">
+		<link rel="stylesheet" href="css/c_style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//トグルボタン
+				//ヘッダーのトグルボタンのクラス着脱
+				var btn = '.header_btn';
+				var open = '.header_open';
+				var close = '.header_close';
+				$(btn).click(function(){
+					$(close).removeClass('header_close');
+					$(open).toggleClass('header_close');
+					$(btn).toggleClass('header_open');
+					$('.header_menu').toggleClass('header_open');
+					$('.header_click').toggleClass('header_open');
+				});
+				//トグルメニューを開いていた場合、スクロールでメニューが消える
+				$(window).on('scroll',function(){
+					if ($(btn).hasClass('header_open')){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+					}
+				});
+				//トグルメニューを開いているときに、他の部分をタップすると消える
+				$('.header_click').click(function(){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+				});
+						
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<div class="header_logo">
+					<h1><a href="#">Red Beans Coffee</a></h1>
+				</div>
+				<div class="header_btn">
+					<div></div><div></div><div></div><div>MENU</div>
+				</div>
+				<nav class="header_menu header_close">
+					<ul>
+						<li><a href="#">TOP</a></li>
+						<li><a href="#">ABOUT</a></li>
+						<li><a href="#">ACCESS</a></li>
+						<li><a href="#">NEWS</a></li>
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">CONTACT</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="header_click header_close"></div>
+		<article>
+			<section class="hero_img d_flex ta_c">
+				<div>
+					<h1>Red Beans Coffee</h1>
+					<div>
+						<h2>コーヒー豆専門店</h2>
+						<p>オーダー自家焙煎コーヒー</p>
+					</div>
+				</div>
+			</section>
+			<section id="con1">
+				<div class="container d_flex">
+					<div class="w_full ta_c">
+					<h2>あなたが選ぶ、究極のコーヒー</h2>
+					<p>
+						Red Beans Coffeeはあなた好みのコーヒーを創り出すお手伝いをいたします。
+					</p>
+					</div>
+				</div>
+			</section>
+			<section id="con2">
+				<div class="container d_flex">
+						<div><img src="img/c_img01.jpg" alt=""></div>
+						<div><img src="img/c_img02.jpg" alt=""></div>
+						<div><img src="img/c_img03.jpg" alt=""></div>
+						<div><img src="img/c_img04.jpg" alt=""></div>
+				</div>
+				<div class="container w_full ta_c">
+					<h2>
+						<span class="ws_n">お客様のお好みのコーヒーを提案し、</span>
+						<span class="ws_n">焼き立てのコーヒーをお届け。</span>
+					</h2>
+					<p>
+						おいしいコーヒーに必要なのは良質な生豆と、豆にあった焙煎、そして鮮度。
+					</p>
+					<p>
+						お客様にお選びいただいた生豆を、目の前で焙煎いたします。
+					</p>
+					<p>
+						焼き立ての香り高いコーヒーをお楽しみください。
+					</p>
+				</div>
+			</section>
+			<section id="con3">
+				<div class="container d_flex jc_b">
+					<div class="card">
+						<div class="card_main">
+							<div>
+								<a href="#">
+									<div class="card_img">
+										<h3>BEANS</h3>
+										<div class="card_tri"></div>
+										<img src="img/c_card01.jpg" alt="">
+									</div>
+								</a>
+								<p>
+									世界中から選りすぐった30種類を超える良質のコーヒー豆をご用意しております。
+									高産地物、完熟豆、有機栽培、天日干し、ハンドピックによる厳選など、こだわりを持って作られたコーヒー豆たち。
+									その中でも、世界中のコーヒー好きの間で人気があるもの、個性的で優れているものだけを取りそろえました。
+								</p>
+							</div>
+							<a class="btn" href="#">
+								詳細はこちら
+							</a>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card_main">
+							<div>
+								<a href="#">
+									<div class="card_img">
+										<h3>ROAST</h3>
+										<div class="card_tri"></div>
+										<img src="img/c_card02.jpg" alt="">
+									</div>
+								</a>
+								<p>
+									少量の生豆から丁寧に焙煎することができる高速熱風焙煎機を使用しています。
+									そのため、お客様一人ひとりのお好みにあわせ、焙煎度合いや量を調節し、焙煎することができるのです。
+								</p>
+							</div>
+							<a class="btn" href="#">
+								詳細はこちら
+							</a>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card_main">
+							<div>
+								<a href="#">
+									<div class="card_img">
+										<h3>FRESHNESS</h3>
+										<div class="card_tri"></div>
+										<img src="img/c_card03.jpg" alt="">
+									</div>
+								</a>
+								<p>
+									コーヒーは生鮮品です。焙煎後時間が経ちすぎると味や香りが落ちてしまいます。
+									ご注文毎に焙煎することで、鮮度の高いコーヒー豆を提供しています.
+									焙煎後、約2~3週間以内が最も香りがよく、飲み頃です。
+									焙煎後１週間以降は、炭酸ガスが抜けるのを防げる冷蔵庫や冷凍庫、酸化を防げる密閉容器などをご利用ください。
+								</p>
+							</div>
+							<a class="btn" href="#">
+								詳細はこちら
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="con4">
+				<div class="container d_flex jc_b">
+					<div>
+						<div>
+							<h2>News<span class="min">お知らせ</span></h2>
+							<div class="box_list box1">
+								<div>
+									<a href="#">
+										<time datetime="2019-04-23">04/23</time>
+										<p>店頭限定オススメ珈琲が「ピルリット農園」に変わりました！</p>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<time datetime="2019-04-23">04/23</time>
+										<p>ブラジル　2018カップオブプログレッシブセラードナチュラル部門1位「ピルリット農園」が入荷しました！</p>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<time datetime="2019-04-08">04/08</time>
+										<p>店頭限定オススメ珈琲がエチオピアイルガチェフェG1「ナチュラルコンガ」に変わりました！</p>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<time datetime="2019-04-08">04/08</time>
+										<p>夏に向けて「コールドブリューセット」を販売開始しました。</p>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<time datetime="2019-04-01">04/01</time>
+										<p>Webサイトをリニューアルしました</p>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<a href="#">お知らせ一覧 ＞</a>
+						</div>
+					</div>
+					<div>
+						<div>
+							<h2>Event<span class="min">イベント</span></h2>
+							<div class="box_list box2">
+								<div>
+									<a href="#">
+										<div>
+											<img src="img/c_event01.jpg" alt="">
+										</div>
+										<div>
+											<time datetime="2019-04-27">04/27</time>
+											<p>阪急百貨店のイベントブースに出店します</p>
+										</div>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<div>
+											<img src="img/c_event02.jpg" alt="">
+										</div>
+										<div>
+											<time datetime="2019-04-13">04/13</time>
+											<p>期間限定ケーキバイキング開催</p>
+										</div>
+									</a>
+								</div>
+								<div>
+									<a href="#">
+										<div>
+											<img src="img/c_event03.jpg" alt="">
+										</div>
+										<div>
+											<time datetime="2019-04-01">04/01</time>
+											<p>Caffe NOVOオープン！</p>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+						<div>
+							<a href="#">イベント一覧 ＞</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="con5">
+				<div class="container ta_c">
+					<h2>よくある質問</h2>
+					<p>お客様からよくある質問をまとめました。お問い合わせの前に、一度ご確認ください。</p>
+					<a href="#" class="btn">よくある質問</a>
+				</div>
+			</section>
+			<div class="page-top_btn hide">
+				<a href="#">
+					PAGE<br>TOP
+				</a>
+			</div>
+		</article>
+		<footer>
+			<div class="container">
+				<h3 class="ta_c">Red Beans Coffee</h3>
+				<div class="d_flex footer_menu">
+					<div>
+						<address>
+							<p>
+							
+								〒530-0000<br>
+								大阪府大阪市〇区〇〇0丁目0-0
+							</p>
+							<p>
+								TEL<br>
+								00-0000-0000
+							</p>
+						</address>
+						<p>
+							営業時間<br>
+							10:00～20:00
+						</p>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="#">Top</a></li>
+								<li><a href="#">About</a></li>
+								<li><a href="#">News</a></li>
+								<li><a href="#">Event</a></li>
+								<li><a href="#">Access</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="#">FAQ</a></li>
+								<li><a href="#">Contact</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Site Map</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="d_flex ta_c">
+					<small>&copy;Copyright 2019 Red Beens Coffee. All Right Reserved.</small>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

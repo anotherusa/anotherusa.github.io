@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>ひいらぎ不動産 : 会社案内</title>
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/h_style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//トグルボタン
+				//ヘッダーのトグルボタンのクラス着脱
+				var btn = '.header_btn';
+				var open = '.header_open';
+				var close = '.header_close';
+				$(btn).click(function(){
+					$(close).removeClass('header_close');
+					$(open).toggleClass('header_close');
+					$(btn).toggleClass('header_open');
+					$('.header_menu').toggleClass('header_open');
+					$('.header_click').toggleClass('header_open');
+				});
+				//トグルメニューを開いていた場合、スクロールでメニューが消える
+				$(window).on('scroll',function(){
+					if ($(btn).hasClass('header_open')){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+					}
+				});
+				//トグルメニューを開いているときに、他の部分をタップすると消える
+				$('.header_click').click(function(){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+				});
+						
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header class="bg_bl ahv_dk">
+			<div class="container">
+				<div class="header_logo">
+					<h1><a href="h_index.html">Hiiragi Real Estate</a></h1>
+				</div>
+				<div class="header_btn">
+					<div></div><div></div><div></div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container">
+					<nav class="header_menu header_close">
+						<ul>
+							<li class="icon"><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+							<li><a href="h_info.html">お知らせ</a></li>
+							<li><a href="h_point.html">物件選びのポイント</a></li>
+							<li><a href="h_rcm.html">おすすめ物件</a></li>
+							<li><a href="h_company.html">会社案内</a></li>
+							<li><a href="h_contact.html">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="header_click header_close"></div>
+		<article>
+			<div class="bg_lb ahv_dk">
+				<div class="container bread">
+					<ul>
+						<li><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+						<li><i class="fas fa-angle-right"></i></li>
+						<li><a href="#">会社案内</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<section class="inner">
+					<div class="hl hl_tl">
+						<h1>会社案内</h1>
+					</div>
+					<p>
+						お客様をサポートする最良のパートナーとして、お客様を理解し、満足と感動のサービスを提供しながら、地域社会への貢献をめざします。
+					</p>
+				</section>
+				<section class="inner">
+					<div class="hl hl_ll">
+						<h2>会社概要</h2>
+					</div>
+					<table class="com">
+						<caption>会社情報</caption>
+						<tr>
+							<th>社名</th>
+							<td>ひいらぎ不動産</td>
+						</tr>
+						<tr>
+							<th>所在地</th>
+							<td>〒105-0000<br>東京都〇〇区〇〇1-1-1</td>
+						</tr>
+						<tr>
+							<th>電話番号</th>
+							<td>03-5401-XXXX</td>
+						</tr>
+						<tr>
+							<th>FAX番号</th>
+							<td>03-5401-XXXX</td>
+						</tr>
+						<tr>
+							<th>免許番号</th>
+							<td>123456789</td>
+						</tr>
+						<tr>
+							<th>設立</th>
+							<td>1972年12月</td>
+						</tr>
+						<tr>
+							<th>代表者</th>
+							<td>大阪　太郎</td>
+						</tr>
+						<tr>
+							<th>営業時間</th>
+							<td>10時から21時まで</td>
+						</tr>
+						<tr>
+							<th>定休日</th>
+							<td>月曜日</td>
+						</tr>
+					</table>
+				</section>
+				<section class="inner">
+					<div class="hl hl_ll">
+						<h2>アクセスマップ</h2>
+					</div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.942390418556!2d139.7601406502621!3d35.653790980103494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bce214bc961%3A0xcd30ece24d761472!2z44CSMTA1LTAwMjIg5p2x5Lqs6YO95riv5Yy65rW35bK477yR5LiB55uu77yR77yW4oiS77yR!5e0!3m2!1sja!2sjp!4v1550556228616" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+				</section>
+			</div>
+		</article>
+		<footer class="bg_bl ahv_dk">
+			<div class="hl">
+				<div class="container d_flex ai_st">
+					<h3><small>「安心」と「未来」をつくる　</small>ひいらぎ不動産</h3>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-twitter"></i></a></div>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer_menu d_flex ai_st">
+					<div>
+						<address>
+							<p>
+								〒105-0000<br>
+								東京都〇〇区〇〇1-1-1
+							</p>
+							<p>
+								TEL:03-5401-XXXX<br>
+								FAX:03-5401-XXXX
+							</p>
+						</address>
+						<p>
+							営業時間<br>
+							10:00～21:00<br>
+							月曜定休
+						</p>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_index.html">ホーム</a></li>
+								<li><a href="h_info.html">お知らせ</a></li>
+								<li><a href="h_point.html">物件選びのポイント</a></li>
+								<li><a href="h_rcm.html">オススメ物件</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_company.html">会社案内</a></li>
+								<li><a href="h_contact.html">お問い合わせ</a></li>
+								<li><a href="h_privacy.html">個人情報保護方針</a></li>
+								<li><a href="h_sitemap.html">サイトマップ</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container d_flex ta_c ai_st">
+					<div class="d_flex">
+						<small>&copy;Copyright 2019 Hiiragi Real Estate. All Right Reserved.</small>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

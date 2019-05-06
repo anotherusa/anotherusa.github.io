@@ -1,0 +1,213 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>ひいらぎ不動産 : 個人情報保護方針</title>
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/h_style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//トグルボタン
+				//ヘッダーのトグルボタンのクラス着脱
+				var btn = '.header_btn';
+				var open = '.header_open';
+				var close = '.header_close';
+				$(btn).click(function(){
+					$(close).removeClass('header_close');
+					$(open).toggleClass('header_close');
+					$(btn).toggleClass('header_open');
+					$('.header_menu').toggleClass('header_open');
+					$('.header_click').toggleClass('header_open');
+				});
+				//トグルメニューを開いていた場合、スクロールでメニューが消える
+				$(window).on('scroll',function(){
+					if ($(btn).hasClass('header_open')){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+					}
+				});
+				//トグルメニューを開いているときに、他の部分をタップすると消える
+				$('.header_click').click(function(){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+				});
+						
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header class="bg_bl ahv_dk">
+			<div class="container">
+				<div class="header_logo">
+					<h1><a href="h_index.html">Hiiragi Real Estate</a></h1>
+				</div>
+				<div class="header_btn">
+					<div></div><div></div><div></div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container">
+					<nav class="header_menu header_close">
+						<ul>
+							<li class="icon"><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+							<li><a href="h_info.html">お知らせ</a></li>
+							<li><a href="h_point.html">物件選びのポイント</a></li>
+							<li><a href="h_rcm.html">おすすめ物件</a></li>
+							<li><a href="h_company.html">会社案内</a></li>
+							<li><a href="h_contact.html">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="header_click header_close"></div>
+		<article>
+			<div class="bg_lb ahv_dk">
+				<div class="container bread">
+					<ul>
+						<li><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+						<li><i class="fas fa-angle-right"></i></li>
+						<li><a href="#">個人情報保護方針</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<section class="inner">
+					<div class="hl hl_tl">
+						<h1>個人情報保護方針</h1>
+					</div>
+					<p>
+						株式会社 ひいらぎ不動産（以下「当社」といいます）は、以下のとおり個人情報保護方針を定め、個人情報保護の仕組みを構築し、全従業員に個人情報保護の重要性の認識と取組みを徹底させることにより、個人情報の保護を推進致します。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>個人情報の管理</h3>
+					<p>
+						当社は、お客さまの個人情報を正確かつ最新の状態に保ち、個人情報への不正アクセス・紛失・破損・改ざん・漏洩などを防止するため、セキュリティシステムの維持・管理体制の整備・社員教育の徹底等の必要な措置を講じ、安全対策を実施し個人情報の厳重な管理を行ないます。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>個人情報の利用目的</h3>
+					<p>
+						お客さまからお預かりした個人情報は、当社からのご連絡や業務のご案内やご質問に対する回答として、電子メールや資料のご送付に利用いたします。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>個人情報の第三者への開示・提供の禁止</h3>
+					<p>
+						当社は、お客さまよりお預かりした個人情報を適切に管理し、次のいずれかに該当する場合を除き、個人情報を第三者に開示いたしません。
+					</p>
+					<ul class="ls_dsc">
+						<li>お客さまの同意がある場合</li>
+						<li>お客さまが希望されるサービスを行なうために当社が業務を委託する業者に対して開示する場合</li>
+						<li>法令に基づき開示することが必要である場合</li>
+					</ul>
+				</section>
+				<section class="inner">
+					<h3>個人情報の安全対策</h3>
+					<p>
+						当社は、個人情報の正確性及び安全性確保のために、セキュリティに万全の対策を講じています。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>ご本人の照会</h3>
+					<p>
+						お客さまがご本人の個人情報の照会・修正・削除などをご希望される場合には、ご本人であることを確認の上、対応させていただきます。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>法令、規範の遵守と見直し</h3>
+					<p>
+						当社は、保有する個人情報に関して適用される日本の法令、その他規範を遵守するとともに、本ポリシーの内容を適宜見直し、その改善に努めます。
+					</p>
+				</section>
+				<section class="inner">
+					<h3>お問い合せ</h3>
+					<p>
+						当社の個人情報の取扱に関するお問い合せは下記までご連絡ください。<br>
+						株式会社 ひいらぎ不動産<br>
+						〒105-0000　東京都〇〇区〇〇1-1-1<br>
+						TEL:03-5401-XXXX FAX:03-5401-XXXX<br>
+						Mail:info@〇〇〇〇.co.jp<br>
+					</p>
+				</section>
+			</div>
+		</article>
+		<footer class="bg_bl ahv_dk">
+			<div class="hl">
+				<div class="container d_flex ai_st">
+					<h3><small>「安心」と「未来」をつくる　</small>ひいらぎ不動産</h3>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-twitter"></i></a></div>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer_menu d_flex ai_st">
+					<div>
+						<address>
+							<p>
+								〒105-0000<br>
+								東京都〇〇区〇〇1-1-1
+							</p>
+							<p>
+								TEL:03-5401-XXXX<br>
+								FAX:03-5401-XXXX
+							</p>
+						</address>
+						<p>
+							営業時間<br>
+							10:00～21:00<br>
+							月曜定休
+						</p>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_index.html">ホーム</a></li>
+								<li><a href="h_info.html">お知らせ</a></li>
+								<li><a href="h_point.html">物件選びのポイント</a></li>
+								<li><a href="h_rcm.html">オススメ物件</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_company.html">会社案内</a></li>
+								<li><a href="h_contact.html">お問い合わせ</a></li>
+								<li><a href="h_privacy.html">個人情報保護方針</a></li>
+								<li><a href="h_sitemap.html">サイトマップ</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container d_flex ta_c ai_st">
+					<div class="d_flex">
+						<small>&copy;Copyright 2019 Hiiragi Real Estate. All Right Reserved.</small>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

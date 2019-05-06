@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<meta name="robots" content="noindex,nofollow,noarchive">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<title>ひいらぎ不動産 : お問い合わせ</title>
+		<link rel="stylesheet" href="css/all.min.css">
+		<link rel="stylesheet" href="css/h_style.css">
+		<script src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			$(function(){
+				
+				//トグルボタン
+				//ヘッダーのトグルボタンのクラス着脱
+				var btn = '.header_btn';
+				var open = '.header_open';
+				var close = '.header_close';
+				$(btn).click(function(){
+					$(close).removeClass('header_close');
+					$(open).toggleClass('header_close');
+					$(btn).toggleClass('header_open');
+					$('.header_menu').toggleClass('header_open');
+					$('.header_click').toggleClass('header_open');
+				});
+				//トグルメニューを開いていた場合、スクロールでメニューが消える
+				$(window).on('scroll',function(){
+					if ($(btn).hasClass('header_open')){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+					}
+				});
+				//トグルメニューを開いているときに、他の部分をタップすると消える
+				$('.header_click').click(function(){
+						$(open).toggleClass('header_close');
+						$(open).toggleClass('header_open');
+				});
+						
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header class="bg_bl ahv_dk">
+			<div class="container">
+				<div class="header_logo">
+					<h1><a href="h_index.html">Hiiragi Real Estate</a></h1>
+				</div>
+				<div class="header_btn">
+					<div></div><div></div><div></div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container">
+					<nav class="header_menu header_close">
+						<ul>
+							<li class="icon"><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+							<li><a href="h_info.html">お知らせ</a></li>
+							<li><a href="h_point.html">物件選びのポイント</a></li>
+							<li><a href="h_rcm.html">おすすめ物件</a></li>
+							<li><a href="h_company.html">会社案内</a></li>
+							<li><a href="h_contact.html">お問い合わせ</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<div class="header_click header_close"></div>
+		<article>
+			<div class="bg_lb ahv_dk">
+				<div class="container bread">
+					<ul>
+						<li><a href="h_index.html"><i class="fas fa-home"></i></a></li>
+						<li><i class="fas fa-angle-right"></i></li>
+						<li><a href="#">お問い合わせ</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="container">
+				<section class="inner">
+					<div class="hl hl_tl">
+						<h1>お問い合わせ</h1>
+					</div>
+					<p>
+						フォームによるお問い合わせについては、多少お時間をいただく可能性がございます。お急ぎの場合は、お電話にてお問い合わせください。
+					</p>
+				</section>
+				<section class="inner">
+					<div class="hl hl_ll">
+						<h2>お電話によるお問い合わせ</h2>
+					</div>
+					<p>
+						電話番号：0120-541-XXX
+						営業時間：10時から21時まで（毎週月曜日定休）
+					</p>
+				</section>
+				<section class="inner">
+					<div class="hl hl_ll">
+						<h2>フォームによるお問い合わせ</h2>
+					</div>
+					<p>
+						以下のフォームにご記入の上、送信してください。
+					</p>
+					<form>
+						<p>
+							<label>名前（必須）:
+								<input type="text" name="name" placeholder="全角で入力してください。" required="">
+							</label>
+						</p>
+						<p>
+							<label>フリガナ（任意）:
+								<input type="text" name="furigana" placeholder="全角カタカナで入力してください。">
+							</label>
+						</p>
+						<p>
+							<label>電話番号（必須）:
+								<input type="tel" name="tel" placeholder="ハイフンなしの半角数字で入力してください。" required="">
+							</label>
+						</p>
+						<p>
+							<label>メールアドレス（必須）:
+								<input type="email" name="mail" placeholder="半角で入力してください。" required="">
+							</label>
+						</p>
+						<p>
+							<label>お問い合わせ内容:
+								<textarea name="commnent" placeholder="できるだけ具体的な内容を入力してください。"></textarea>
+							</label>
+						</p>
+						<p>
+							<div class="btn_box"><button type="submit">送信</button></div>
+							<div class="btn_box"><button type="reset">リセット</button></div>
+						</p>
+					</form>
+				</section>
+			</div>
+		</article>
+		<footer class="bg_bl ahv_dk">
+			<div class="hl">
+				<div class="container d_flex ai_st">
+					<h3><small>「安心」と「未来」をつくる　</small>ひいらぎ不動産</h3>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-twitter"></i></a></div>
+					<div class="icon d_flex ai_st"><a href="#"><i class="fab fa-facebook-f"></i></a></div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="footer_menu d_flex ai_st">
+					<div>
+						<address>
+							<p>
+								〒105-0000<br>
+								東京都〇〇区〇〇1-1-1
+							</p>
+							<p>
+								TEL:03-5401-XXXX<br>
+								FAX:03-5401-XXXX
+							</p>
+						</address>
+						<p>
+							営業時間<br>
+							10:00～21:00<br>
+							月曜定休
+						</p>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_index.html">ホーム</a></li>
+								<li><a href="h_info.html">お知らせ</a></li>
+								<li><a href="h_point.html">物件選びのポイント</a></li>
+								<li><a href="h_rcm.html">オススメ物件</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div>
+						<nav>
+							<ul class="fw_w">
+								<li><a href="h_company.html">会社案内</a></li>
+								<li><a href="h_contact.html">お問い合わせ</a></li>
+								<li><a href="h_privacy.html">個人情報保護方針</a></li>
+								<li><a href="h_sitemap.html">サイトマップ</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="hl">
+				<div class="container d_flex ta_c ai_st">
+					<div class="d_flex">
+						<small>&copy;Copyright 2019 Hiiragi Real Estate. All Right Reserved.</small>
+					</div>
+					<div class="icon">
+						<a href="#"><i class="fas fa-angle-up"></i></a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
