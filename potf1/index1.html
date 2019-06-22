@@ -11,7 +11,80 @@
 		<link rel="stylesheet" href="js/colorbox/colorbox.css">
 		<script src="js/jquery-3.3.1.min.js"></script>
 		<script src="js/colorbox/jquery.colorbox-min.js"></script>
-		<script src="js/main.js"></script>
+		<script>
+			$(function() {
+				$(".img_box").colorbox();
+			});
+		</script>
+		<script>
+			$(function(){
+				//スムーススクロール
+					// #で始まるリンクをクリックしたら実行
+				$('a[href^="#"]').click(function() {
+				  var speed = 400; 
+				  var href = $(this).attr("href");
+				  var target = $(href == "#" || href == "" ? 'html' : href);
+				  var position = target.offset().top;
+				  $('body,html').animate({scrollTop:position}, speed, 'swing');
+				  return false;
+				});
+				$(window).on('load scroll',function(){
+					$('.scin').each(function(){
+						var cTop = $(this).offset().top;
+						var vTop = $(window).scrollTop();
+						var vHeight = $(window).height();
+						var vBtm = vTop + vHeight*0.8;
+						if( vBtm > cTop ){
+							$(this).addClass('op');
+						}
+						if(cTop > vBtm){
+							$(this).removeClass('op');
+						}
+						if(cTop + $(this).height() < vTop){
+							$(this).removeClass('op');
+						}
+					});
+				});
+				$(window).on('load scroll',function(){
+					$('#con1').each(function(){
+						var cTop = $(this).offset().top;
+						var vTop = $(window).scrollTop();
+						var vHeight = $(window).height();
+						var vBtm = vTop + vHeight;
+						if( vBtm > cTop ){
+							$('.sheet1').removeClass('hide');
+						}
+						if(cTop + $(this).height() < vTop){
+							$('.sheet1').addClass('hide');
+						}
+					});
+					$('#con2').each(function(){
+						var cTop = $(this).offset().top;
+						var vTop = $(window).scrollTop();
+						var vHeight = $(window).height();
+						var vBtm = vTop + vHeight;
+						if( vBtm > cTop ){
+							$('.sheet2').removeClass('hide');
+						}
+						if(cTop + $(this).height() < vTop){
+							$('.sheet2').addClass('hide');
+						}
+					});
+					$('#con3').each(function(){
+						var cTop = $(this).offset().top;
+						var vTop = $(window).scrollTop();
+						var vHeight = $(window).height();
+						var vBtm = vTop + vHeight;
+						if( vBtm > cTop ){
+							$('.sheet3').removeClass('hide');
+						}
+						if(cTop + $(this).height() < vTop){
+							$('.sheet3').addClass('hide');
+						}
+					});
+				});
+			});
+		</script>
 	<body>
 		<header>
 			<nav class="container">
@@ -23,7 +96,7 @@
 						<a href="#con2">WEB SITE</a>
 					</li>
 					<li class="tab_text">
-						<a href="#con3">WRITING</a>
+						<a href="#con3">ILLUST</a>
 					</li>
 					<li class="tab_text">
 						<a href="#con4">PROFILE</a>
@@ -84,6 +157,11 @@
 							<h1>PORTFOLIO</h1>
 						</div>
 					</div>
+<!--					<div class="inner">
+						<div class="main">
+							<h2></h2>
+						</div>
+					</div>-->
 				</div>
 				<div id="con2" class="content scin fade">
 					<div class="inner">
@@ -98,7 +176,7 @@
 								<div class="text_box">
 									<h3>関西美装</h3>
 									<p>訓練校の実習でチームで制作した、実在する清掃業者のWebサイトです。</p>
-									<p>BtoBのサイト。「プロフェッショナル感と親近感」をイメージしたデザインを目指しました。6人の1チームで全員で各ページのデザインやコーディングを行い制作しました。</p>
+									<p>BtoBのサイト。「プロフェッショナル感と親近感」をイメージしたデザインを目指しました。6人の1チームで全員でデザイン、全員でコーディングを行い制作しました。</p>
 									<h4>デザインを担当したページ</h4>
 									<ul>
 										<li>会社概要ページ</li>
@@ -113,8 +191,8 @@
 									<ul>
 										<li>完成したコードを合わせた際にclass名が競合しないよう微調整や修正。</li>
 										<li>ハンバーガーメニューのCSSとjQueryを使ったアニメーションとインターフェイス。</li>
-										<li>トップページのヒーローイメージのCSSアニメーション。</li>
-										<li>会社概要ページの中ほど、画面に要素が入ると左右から画像がスライドしてくるCSSとjQuery。</li>
+										<li>トップページのヒーローイメージのCSSアニメーション</li>
+										<li>会社概要ページの中ほど、画面に要素が入ると左右から画像がスライドしてくるCSSとjQuery</li>
 									</ul>
 								</div>
 							</section>
@@ -163,7 +241,7 @@
 									<ul>
 										<li>赤のインパクトが強いため、それ以外の文字などはモノトーンに統一。文字が多い部分は背景に白を使用する。</li>
 										<li>トップページだけでもお店全体のイメージが分かるような作り。</li>
-										<li>リンクをホバーすると背景の色が変わる、画像が大きくなるなど、操作感をだした。</li>
+										<li>おしゃれなカード型のデザインを目指す。リンクをホバーすると画像が動くなどのギミックで全体に硬くなりすぎないようにしました。（カフェがメインでないので豆の写真を多めに使用）</li>
 									</ul>
 								</div>
 							</section>
@@ -177,7 +255,7 @@
 									<h3>PORTFOLIO</h3>
 									<p>このページです。</p>
 									<p>デモページが堅めのサイトが多かったため、柔らかい色合いやノートのような質感を目指しました。</p>
-									<p>アブソリュート等を使って、他のデモサイトで試せなかったゲームのUIのような雰囲気も盛り込みました。</p>
+									<p>せっかくなので、CSSとjQueryを使って動きのあるページをめざしてみました。スクロールで要素の表示非表示、移動などのアニメーションはクラスの付け外しをするスクリプトを書いて作成しています。</p>
 								</div>
 							</section>
 						</div>
@@ -186,48 +264,20 @@
 				<div id="con3" class="content scin fade">
 					<div class="inner">
 						<div class="main">
-							<h2>WRITING</h2>
-							<section class="scin fade text_box">
-								<h3>株式会社みやあじよ</h3>
-								<p>2019年5月訓練校の授業で、Web制作会社「株式会社みやあじよ」様へ1か月間、実習として伺いました。こちらではブログのライティングと、アイキャッチや文章内で使う画像の作成や加工を行いました。私がライティングを行った記事は下記の3件です。画像の加工にはAdobe Illustratorを使用しました。</p>
-								<p>Web製作会社のブログなので、記事を読んだユーザーから「Web製作」や「Webマーケティング」のご相談やご依頼をいただけることを目的に書いています。</p>
-							</section>
+							<h2>ILLUST</h2>
 							<section class="scin fade">
-								<div class="illst_box">
-									<a href="https://myajo.net/tips/3871/" target="_blank" class="d_bl">
-										<img src="img/m_write1.jpg" alt="WordPress">
-									</a>
-								</div>
-								<div class="text_box">
-									<h3>WordPressで会社のホームページが無料で初心者でも簡単に制作できるの？</h3>
-									<p>自社サイトを持ちたいを考えている方で、「WordPress」でWebサイトを自力で製作するか、Web製作会社に製作依頼をするか悩まれている方向けの記事です。</p>
-									<p>WordPressを使うメリットやデメリットを紹介し、ユーザーの環境において自力で制作することが好ましいか難しいかを考える上で参考にしていただく内容です。</p>
-									<p>また、自力での製作が難しいと考えられたユーザーから、Webサイト制作のご相談をいただくことを目的として書いています。</p>
-								</div>
-							</section>
-							<section class="scin fade">
-								<div class="illst_box">
-									<a href="https://myajo.net/tips/4037/" target="_blank" class="d_bl">
-										<img src="img/m_write2.jpg" alt="E-A-T">
-									</a>
-								</div>
-								<div class="text_box">
-									<h3>【SEO】E-A-Tの重要性！高品質なコンテンツを制作するには！？</h3>
-									<p>Webサイトをお持ちの会社の、Web担当者向けに書いた記事です。</p>
-									<p>すでにSEO対策をいろいろと行っているが、調べたら出てきた「E-A-T」とは何か、どんな対応をすればよいのかということを調べている方向けに、解説しています。</p>
-								</div>
-							</section>
-							<section class="scin fade">
-								<div class="illst_box">
-									<a href="https://myajo.net/tips/4568/" target="_blank" class="d_bl">
-										<img src="img/m_write3.jpg" alt="SEM">
-									</a>
-								</div>
-								<div class="text_box">
-									<h3>【SEO】Web集客はSEO対策だけじゃない！？SEMとは？</h3>
-									<p>Web担当者やWebで集客をしたいと考えている方向けに書いた記事です。</p>
-									<p>状況に合わせ、効果的にWebマーケティングを行う・・・その一環としてSEOやリスティング広告の違いについて解説しています。</p>
-									<p>より有効なリスティング広告の活用や、集客方法などについて相談やご依頼いただけることを目的として書いています。</p>
+								<h3>単眼展</h3>
+								<p>2017年に参加したグループ展示に出したイラストです。ポストカードにして展示、販売いたしました。名前通り目が1つしかない人物を描く展示でした。</p>
+								<div class="d_flex fw_w">
+									<div class="illst_box">
+										<a href="img/m_il01.png" class="img_box"><img src="img/m_il01.png" alt="ショコラオランジュ"></a>
+									</div>
+									<div class="illst_box">
+										<a href="img/m_il02.png" class="img_box"><img src="img/m_il02.png" alt="わたあめ"></a>
+									</div>
+									<div class="illst_box">
+										<a href="img/m_il03.png" class="img_box"><img src="img/m_il03.png" alt="サクマ式ド〇ップ"></a>
+									</div>
 								</div>
 							</section>
 						</div>
@@ -237,7 +287,7 @@
 					<div class="inner">
 						<div class="main">
 							<h2>PROFILE</h2>
-							<section class="text_box">
+							<section>
 								<table>
 									<tr>
 										<th>名前</th>
@@ -265,7 +315,7 @@
 											<ul>
 												<li>Adobe Photoshop</li>
 												<li>Adobe Illustrator</li>
-												<li>CLIP STUDIO PAINT</li>
+												<li>CLIP STUDIO</li>
 											</ul>
 											<h3>3Dモデリング</h3>
 											<ul>
@@ -279,14 +329,12 @@
 										<td><a href="mailto:anotherusa24@gmail.com">anotherusa24@gmail.com</a></td>
 									</tr>
 								</table>
-							</section>
-							<section class="text_box">
 								<p>はじめまして、寳來　陵平と申します。</p>
 								<p>メイクの専門学校を卒業後、約10年以上にわたり、接客販売の仕事をしてまいりました。</p>
 								<p>中学生時代に独学でWebサイトの制作をはじめ、メイクの会社で働いていた時期はその知識を生かし、接客販売の通常業務に加え自社サイトの管理を行っておりました。そのほかコンビニでアルバイトをしていた時期にも、知人のWebサイトの作成を2件手伝いました。</p>
 								<p>一番長く働いたユニクロではWeb関係の業務はありませんでしたが、通常の接客対応業務全般に加え、パンツのすそ直し、電話対応、事務、書類の作成など幅広い業務の経験を積みました。</p>
-								<p>ユニクロ退職後、2019年2月より職業訓練校へ行き、HTML5やCSS3、jQuery、バナーの作成などを教わりました。</p>
-								<p>現在はWordPressやPHPを独学で勉強中です。</p>
+								<p>ユニクロ退職後は職業訓練校へ行き、HTML5やCSS3、jQuery、バナーの作成などを教わりました。CSSとjQueryでアニメーションさせるのが好きです。</p>
+								<p>現在はWordPressやPHPを勉強中です。</p>
 							</section>
 							<div><small class="ta_c d_bl">&copy;2019 Portfolio of Ryohei Horai.</small></div>
 						</div>
